@@ -15,7 +15,9 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/scrolling-nav.css" rel="stylesheet">
+  <!-- <link href="css/scrolling-nav.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/scrolling-nav.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.44/Tone.js"></script>
 
   <script src="node_modules/tone/build/Tone.js"></script>
 
@@ -36,10 +38,10 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Play with filters</a>
+            <a class="nav-link js-scroll-trigger" href="#playloops">Play with filters</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Information</a>
+            <a class="nav-link js-scroll-trigger" href="#project-info">Information</a>
           </li>
         </ul>
       </div>
@@ -47,15 +49,14 @@
   </nav>
 
   <header class="bg-primary text-white">
-
     <div class="container text-center">
-      <h1 >George Moraitis MHacks</h1>
+      <h1>George Moraitis MHacks</h1>
       <p class="lead">A landing page for representing my submission</p>
     </div>
   </header>
 
-  <section id="about" class="bg-light">
-    <div class="container-fluid">
+  <section id="playloops" class="bg-light">
+    <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Filtering a Drum Loop</h2>
@@ -66,43 +67,59 @@
             musical synthesizers, sound effects, sound reinforcement systems,
             instrument amplifiers and virtual reality systems.
           </p>
+          <br>
           <div class="row text-center">
             <div class="col-lg-8 mx-auto">
-            <button type="button" class="btn btn-sm btn-secondary" id="play" aria-pressed="true">Play ( Original
-              )</button>
-            <button type="button" class="btn btn-sm btn-secondary" id="stop" aria-pressed="true">Stop</button>
-            <button type="button" class="btn btn-sm btn-secondary" id="lowpass" aria-pressed="true">Lowpass 80
-              Hz</button>
-            <button type="button" class="btn btn-sm btn-secondary" id="highpass" aria-pressed="true">Highpass 80
-              Hz</button>
-              
+              <button type="button" class="btn btn-sm btn-secondary" id="play" aria-pressed="true">Play ( Original
+                )</button>
+              <button type="button" class="btn btn-sm btn-secondary" id="stop" aria-pressed="true">Stop</button>
+              <button type="button" class="btn btn-sm btn-secondary" id="lowpass" aria-pressed="true">Lowpass 80
+                Hz</button>
+              <button type="button" class="btn btn-sm btn-secondary" id="highpass" aria-pressed="true">Highpass 80
+                Hz</button>
+              <p class="text-center">* To prevent phase cancelation from playing two or three loops at the same time,
+                first, push the stop button.</p>
+            </div>
+            </p>
           </div>
-          
-        </div>
-        <br>
-        <p class="lead">An audio filter is a frequency dependent amplifier circuit,
-          working in the audio frequency range, 0 Hz to beyond 20 kHz.
-          Audio filters can amplify (boost), pass or attenuate (cut) some frequency ranges.
-          Many types of filters exist for different audio applications including hi-fi stereo systems,
-          musical synthesizers, sound effects, sound reinforcement systems,
-          instrument amplifiers and virtual reality systems.
-        </p>
+          <br>
+          <p class="lead"> - In this short example, we can hear a drum loop in its original sound,
+            which means it is in a dry state without any processing. Click the Play ( Original Sound ) button to test
+            it.
+          </p>
+          <p class="lead">
+            - A low-pass filter (LPF) is a filter that passes signals with a frequency lower than a selected cutoff
+            frequency and attenuates signals with frequencies higher than the cutoff frequency.
+            The exact frequency response of the filter depends on the filter design.
+            Click the Lowpass button to hear the change in the sound. It removes any frequencies above 80Hz,
+            or it let passing frequencies until 80 Hz.
+          </p>
+          <p class="lead">
+            - A high-pass filter (HPF) is an electronic filter that passes signals with a frequency higher than a
+            certain cutoff frequency and attenuates signals with frequencies lower than the cutoff frequency.
+            The amount of attenuation for each frequency depends on the filter design. Click the Highpass button to hear
+            the change in the sound.
+            It removes any frequencies below 80Hz,
+            or it let passing frequencies after 80 Hz.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-
-
-
-  <section id="contact">
+  <section id="project-info">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>The project</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor,
-            provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa
-            exercitationem, in, quo totam.</p>
+          <p class="lead">This project is my submission for the MHacks13 beta Hackathon.
+            I decided to make a simple example with an educational goal to showcase what a
+            filter in the digital domain can too. You can read more about digital filters in <a
+              href="https://en.wikipedia.org/wiki/Digital_filter#:~:text=In%20signal%20processing%2C%20a%20digital,certain%20aspects%20of%20that%20signal."
+              target="_blank">Wikipedia</a>. I used a <a href="https://startbootstrap.com/templates/scrolling-nav/"
+              target="_blank">Bootstrap template</a> for the UI and <a href="https://tonejs.github.io/"
+              target="_blank">Tone.js</a> to
+            be able to work with the filters.</p>
         </div>
       </div>
     </div>

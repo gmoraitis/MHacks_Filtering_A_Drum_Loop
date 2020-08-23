@@ -5,14 +5,14 @@
  */
 header {
   padding: 156px 0 100px;
-  background: url("../console.jpg");
-  filter: blur(0.1px);
+  background: url("../img/console.jpg");
+  
  
 }
 
 section {
   padding: 150px 0;
-  filter: blur(0.2px);
+  
 }
 
 
